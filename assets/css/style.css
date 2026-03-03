@@ -1,0 +1,188 @@
+/* Custom Styles */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand img {
+    object-fit: contain;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    color: #333 !important;
+}
+
+/* --- Common Styles --- */
+.service-card {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    min-height: 100%;
+    border-radius: 20px !important;
+}
+
+.service-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
+
+/* --- Mobile View (Reference: image_7ce4fc.png) --- */
+@media (max-width: 767px) {
+    .service-card {
+        padding: 15px 5px !important;
+        min-height: 100px;
+        justify-content: center;
+        border-radius: 15px !important;
+    }
+
+    .card-icon {
+        width: 35px !important; /* Mobile-la icon size */
+        margin-bottom: 8px;
+    }
+
+    .service-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #0066cc !important;
+    letter-spacing: 2.8px;
+    padding-top: 10px;
+}
+}
+
+/* --- Desktop View (Reference: image_7d02ab.png) --- */
+@media (min-width: 768px) {
+    .service-card {
+        min-height: 110px;
+    }
+    
+    .card-icon {
+        width: 55px;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+        color: #333 !important;
+        text-transform: capitalize; /* Normal text format */
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+/* Dropdown Hover (User experience improve panna) */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+
+/* Navbar active state color */
+.nav-link.active {
+    color: #0d6efd !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    
+    padding-left: 40px;
+}
+
+.dropdown-item{
+    padding-top: 16px;
+}
+/* Banner Section */
+.banner-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-wrapper img {
+    /* Image proportions-ah maintain panna */
+    display: block;
+    height: auto;
+}
+
+/* Back to Top Button Styling */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Scroll pannumbodu mattum show aagum */
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .banner-section {
+        margin-top: 10px;
+    }
+}
+
+.slider-wrapper {
+    padding: 20px 0;
+}
+
+/* Card image size fix */
+.slider-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Image stretch aagama iruka */
+    background: #f8f9fa;
+}
+
+/* Slick arrows (Optional: arrows venumna) */
+.slick-prev:before, .slick-next:before {
+    color: #000;
+}
+
+/* Footer Link Styles */
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0066cc; /* Unga brand blue color */
+}
+
+/* Social Icon Styles */
+.social-links a {
+    width: 35px;
+    height: 35px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #0066cc;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Vertical line effect for "Need Help" section as per image */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        border-right: 1px solid #eee;
+        padding-right: 40px;
+    }
+}
+
+/* For Copyright Section */
+footer p.small {
+    font-size: 0.85rem;
+}
