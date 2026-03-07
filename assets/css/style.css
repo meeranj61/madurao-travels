@@ -61,7 +61,7 @@ body {
     .service-title {
         font-size: 1.1rem;
         color: #333 !important;
-        text-transform: capitalize; /* Normal text format */
+        text-transform: uppercase; /* Normal text format */
     }
 
     .service-card p {
@@ -186,3 +186,52 @@ body {
 footer p.small {
     font-size: 0.85rem;
 }
+
+/* Slider Wrapper */
+.slider-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+.custom-slider {
+    gap: 15px; /* Spacing between cards */
+    padding: 10px 5px;
+}
+
+/* Card Width Logic */
+.slider-item {
+    flex: 0 0 85%; /* Mobile: Shows one full card and a peek of next */
+}
+
+@media (min-width: 768px) {
+    .slider-item {
+        flex: 0 0 31%; /* Tablet/Desktop: 3 cards in a row */
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider-item {
+        flex: 0 0 23.5%; /* Large Desktop: 4 cards in a row */
+    }
+}
+
+/* Card Image Aspect Ratio */
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
