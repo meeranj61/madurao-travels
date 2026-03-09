@@ -12,36 +12,41 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/madura_travels_logo.webp" alt="Madurai Travels" height="60">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav "> <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="#">HOME</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            SERVICES
-                        </a>
-                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Flight Booking</a></li>
-                            <li><a class="dropdown-item" href="#">Hotel Booking</a></li>
-                            <li><a class="dropdown-item" href="#">Visa Services</a></li>
-                            <li><a class="dropdown-item" href="#">Tour Packages</a></li>
-                            <li><a class="dropdown-item" href="#">Tour Activities</a></li>
-                            <li><a class="dropdown-item" href="#">Vechile Booking</a></li>
-                            </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link " href="#">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link " href="#">CONTACT US</a></li>
-                </ul>
-                
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 sticky-top shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between">
+        
+        <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon" style="width: 1.2em;"></span>
+        </button>
+
+        <a class="navbar-brand " href="#">
+            <img src="assets/images/madura_travels_logo.webp" alt="Madurai Travels" class="main-logo">
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav"> 
+                <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="#">HOME</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                        SERVICES
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow">
+                        <li><a class="dropdown-item" href="#">Flight Booking</a></li>
+                        <li><a class="dropdown-item" href="#">Hotel Booking</a></li>
+                        <li><a class="dropdown-item" href="#">Visa Services</a></li>
+                        <li><a class="dropdown-item" href="#">Tour Packages</a></li>
+                        <li><a class="dropdown-item" href="#">Tour Activities</a></li>
+                        <li><a class="dropdown-item" href="#">Vehicle Booking</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">ABOUT US</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">CONTACT US</a></li>
+            </ul>
         </div>
-    </nav>
+
+        <div class="d-lg-none" style="width: 40px;"></div>
+    </div>
+</nav>
 
     <section class="py-4 py-md-5 bg-light">
     <div class="container">
@@ -250,6 +255,79 @@
     </div>
 </section>
 
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4 px-2">
+            <h2 class="fw-bold h4 mb-0">Tour Packages</h2>
+            <a href="#" class="text-decoration-none text-dark fw-bold small">Explore <i class="fas fa-arrow-right ms-1"></i></a>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="assets/images/tourpackage1.webp" class="card-img-top package-img" alt="Sri Lanka">
+                    <div class="card-body p-3 text-center">
+                        <h3 class="h6 fw-bold mb-2 card-title-limit">Sri Lankan Coastal Luxury Tour</h3>
+                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                            <span>from-$2,700.00</span>
+                            <span class="vr"></span>
+                            <span>8D/7N</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="assets/images/touchpackage2.webp" class="card-img-top package-img" alt="Honeymoon">
+                    <div class="card-body p-3 text-center">
+                        <h3 class="h6 fw-bold mb-2 card-title-limit">Honeymoon Retreat in Sri Lanka</h3>
+                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                            <span>from-$2,250.00</span>
+                            <span class="vr"></span>
+                            <span>9D/8N</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="assets/images/touchpackage3.webp" class="card-img-top package-img" alt="Cultural">
+                    <div class="card-body p-3 text-center">
+                        <h3 class="h6 fw-bold mb-2 card-title-limit">Wildlife, Hills and Cultural Exploration</h3>
+                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                            <span>from-$1,600.00</span>
+                            <span class="vr"></span>
+                            <span>9D/8N</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="assets/images/touchpackage4.webp" class="card-img-top package-img" alt="Wild">
+                    <div class="card-body p-3 text-center">
+                        <h3 class="h6 fw-bold mb-2 card-title-limit">Wild Wanderlust</h3>
+                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                            <span>from-$1,800.00</span>
+                            <span class="vr"></span>
+                            <span>8D/7N</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-outline-dark rounded-pill px-4 fw-bold shadow-sm">
+                Explore More <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 <section class="banner-section">
         <div class="container-fluid px-0">
             <div class="row g-0">
@@ -269,13 +347,13 @@
             <p class="text-muted small">With our knowledgeable guide, set out on exciting adventures!</p>
         </div>
 
-        <div class="slider-container">
-            <div class="custom-slider d-flex" id="travelSlider">
+        <div class="hacks-slider-wrapper">
+            <div class="hacks-slider-init d-flex" id="hacksSlider">
                 
-                <div class="slider-item">
-                    <div class="card border-0 shadow-sm h-100">
+                <div class="hacks-item px-2">
+                    <div class="card border-0 shadow-sm h-100 hacks-card">
                         <div class="p-2">
-                            <img src="assets/images/chithirai_thiruvila.webp" class="card-img-top rounded-3" alt="Exploring Madurai">
+                            <img src="assets/images/chithirai_thiruvila.webp" class="card-img-top rounded-3 hacks-img" alt="Exploring Madurai">
                         </div>
                         <div class="card-body pt-0 pb-3 text-center">
                             <h6 class="fw-bold mb-0 small text-dark">Exploring Madurai</h6>
@@ -283,10 +361,10 @@
                     </div>
                 </div>
 
-                <div class="slider-item">
-                    <div class="card border-0 shadow-sm h-100">
+                <div class="hacks-item px-2">
+                    <div class="card border-0 shadow-sm h-100 hacks-card">
                         <div class="p-2">
-                            <img src="assets/images/kodaikanal.webp" class="card-img-top rounded-3" alt="Exploring Kodaikanal">
+                            <img src="assets/images/kodaikanal.webp" class="card-img-top rounded-3 hacks-img" alt="Exploring Kodaikanal">
                         </div>
                         <div class="card-body pt-0 pb-3 text-center">
                             <h6 class="fw-bold mb-0 small text-dark">Exploring Kodaikanal</h6>
@@ -294,24 +372,13 @@
                     </div>
                 </div>
 
-                <div class="slider-item">
-                    <div class="card border-0 shadow-sm h-100">
+                <div class="hacks-item px-2">
+                    <div class="card border-0 shadow-sm h-100 hacks-card">
                         <div class="p-2">
-                            <img src="assets/images/rameshvaram.webp" class="card-img-top rounded-3" alt="Exploring Rameshvaram">
+                            <img src="assets/images/rameshvaram.webp" class="card-img-top rounded-3 hacks-img" alt="Exploring Rameshvaram">
                         </div>
                         <div class="card-body pt-0 pb-3 text-center">
                             <h6 class="fw-bold mb-0 small text-dark">Exploring Rameshvaram</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slider-item">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="p-2">
-                            <img src="assets/images/chithirai_thiruvila.webp" class="card-img-top rounded-3" alt="Exploring Madurai">
-                        </div>
-                        <div class="card-body pt-0 pb-3 text-center">
-                            <h6 class="fw-bold mb-0 small text-dark">Exploring Madurai</h6>
                         </div>
                     </div>
                 </div>
@@ -447,7 +514,42 @@
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1 // Chinna mobile-la 1 card
+                    slidesToShow: 2 // Chinna mobile-la 1 card
+                }
+            }
+        ]
+    });
+});
+
+$(document).ready(function(){
+    $('#hacksSlider').slick({
+        dots: true,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2, // 2 items in mobile as per image_02d37e.png
+                    slidesToScroll: 1,
+                    dots: true
                 }
             }
         ]
