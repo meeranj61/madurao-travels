@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking — Madurai Travels</title>
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <!-- Font Awesome 6.6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/flightbook.css">
+
+    <style>
+        
+    </style>
+</head>
+
+<body class="flight-page">
+
+    <!-- ==================== NAVBAR (Same as index.html) ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 sticky-top shadow-sm">
+        <div class="container d-flex align-items-center justify-content-between">
+            <button class="navbar-toggler border-0 px-0" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="width: 1.2em;"></span>
+            </button>
+            <a class="navbar-brand" href="https://maduraitravels.co/">
+                <img src="assets/images/madura_travels_logo.webp" alt="Madurai Travels" class="main-logo">
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link fw-bold" href="https://maduraitravels.co/">HOME</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold active text-primary" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SERVICES
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Flight Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Hotel Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Visa Services</a></li>
+                            <li><a class="dropdown-item" href="https://maduraitravels.co/packages/">Tour Packages</a></li>
+                            <li><a class="dropdown-item" href="#">Tour Activities</a></li>
+                            <li><a class="dropdown-item" href="https://maduraitravels.co/car-rentals/">Vehicle Booking</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="https://maduraitravels.co/about-us/">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="https://maduraitravels.co/contact/">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="d-lg-none" style="width: 40px;"></div>
+        </div>
+    </nav>
+    <!-- ==================== END NAVBAR ==================== -->
+
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="flight-hero">
+        <div class="container">
+            <div class="row align-items-center g-4 g-md-5">
+
+                <div class="col-lg-6">
+                    <div class="flight-badge">
+                        <i class="fas fa-plane"></i> Flight Booking Service
+                    </div>
+                    <h1 class="flight-hero-title">Your Trusted <span>Flight Booking</span> Partner</h1>
+                    <p class="flight-hero-subtitle mt-3 mb-4">Fly with Ease, Experience the World. We handle your flight bookings with the best fares, zero hassle, and 24/7 support — domestic &amp; international.</p>
+                    <a href="https://wa.me/918883339995?text=Hi%20Madurai%20Travels!%20%E2%9C%88%EF%B8%8F%20I%20would%20like%20to%20book%20a%20flight.%20Please%20share%20the%20details."
+                        target="_blank" rel="noopener noreferrer" class="btn-whatsapp-flight">
+                        <i class="fab fa-whatsapp"></i> Book Flight on WhatsApp
+                    </a>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="assets/images/flight_booking.webp" alt="Flight Booking" class="flight-hero-img">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END HERO ==================== -->
+
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="flight-features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="font-family:'Playfair Display',serif; font-weight:800; color:#0c1445;">Why Book With Us?</h2>
+                <p class="text-muted" style="max-width:480px; margin:0 auto; font-size:0.95rem;">We make your flight booking experience smooth, affordable, and stress-free.</p>
+            </div>
+            <div class="row g-3 g-md-4">
+
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-tag"></i></div>
+                        <h5>Best Fares</h5>
+                        <p>Competitive prices on domestic &amp; international flights.</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                        <h5>24/7 Support</h5>
+                        <p>Our team is always available to assist you anytime.</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                        <h5>Instant Booking</h5>
+                        <p>Fast confirmation with e-ticket delivered immediately.</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h5>Secure &amp; Trusted</h5>
+                        <p>Safe payments and verified booking process always.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END WHY CHOOSE US ==================== -->
+
+
+    <!-- ==================== AIRLINES WE SERVE ==================== -->
+    <section class="airlines-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="font-family:'Playfair Display',serif; font-weight:800; color:#0c1445;">Airlines We Work With</h2>
+                <p class="text-muted" style="font-size:0.95rem;">We book tickets across all major domestic and international airlines.</p>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> IndiGo</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Air India</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> SpiceJet</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Vistara</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> GoFirst</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Emirates</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Qatar Airways</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Singapore Airlines</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Etihad Airways</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Fly Dubai</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Air Arabia</span>
+                <span class="airline-chip"><i class="fas fa-plane-departure"></i> Malaysia Airlines</span>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END AIRLINES ==================== -->
+
+
+    <!-- ==================== HOW IT WORKS ==================== -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+                    <h2 style="font-family:'Playfair Display',serif; font-weight:800; color:#0c1445;" class="mb-4">How to Book Your Flight</h2>
+
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h6>Send Us Your Travel Details</h6>
+                            <p>WhatsApp us your travel date, destination, number of passengers, and preferred airlines.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h6>Get the Best Fare Options</h6>
+                            <p>We search and send you multiple fare options with airlines, timings, and prices.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h6>Confirm &amp; Pay Securely</h6>
+                            <p>Choose your preferred flight, make a secure payment, and get your e-ticket instantly.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item mb-0">
+                        <div class="step-number">4</div>
+                        <div class="step-text">
+                            <h6>Fly With Confidence</h6>
+                            <p>We handle all post-booking support — changes, cancellations, and check-in assistance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div style="background: linear-gradient(135deg,#e0f2fe,#bae6fd); border-radius:28px; padding:40px 32px; text-align:center;">
+                        <i class="fas fa-plane" style="font-size:5rem; color:#0284c7; margin-bottom:24px; display:block;"></i>
+                        <h4 style="font-family:'Playfair Display',serif; font-weight:800; color:#0c1445; margin-bottom:12px;">Ready to Fly?</h4>
+                        <p style="color:#475569; font-size:0.95rem; margin-bottom:28px; line-height:1.6;">Talk to our travel expert now and get your flight booked in minutes — no forms, no wait!</p>
+                        <a href="https://wa.me/918883339995?text=Hi%20Madurai%20Travels!%20%E2%9C%88%EF%B8%8F%20I%20would%20like%20to%20book%20a%20flight.%20Please%20share%20the%20details."
+                            target="_blank" rel="noopener noreferrer" class="btn-whatsapp-flight">
+                            <i class="fab fa-whatsapp"></i> Chat &amp; Book Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END HOW IT WORKS ==================== -->
+
+
+    <!-- ==================== TALK TO US CTA ==================== -->
+    <section class="flight-cta">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h2>Talk to Us</h2>
+                    <p>For all your booking inquiries, travel updates, and assistance — connect with our live support team on WhatsApp. We reply instantly!</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="https://wa.me/918883339995?text=Hi%20Madurai%20Travels!%20%E2%9C%88%EF%B8%8F%20I%20would%20like%20to%20book%20a%20flight.%20Please%20share%20the%20details."
+                        target="_blank" rel="noopener noreferrer" class="btn-whatsapp-flight">
+                        <i class="fab fa-whatsapp"></i> Chat with Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END CTA ==================== -->
+
+
+    <!-- ==================== BOTTOM TAGLINE ==================== -->
+    <section class="flight-tagline">
+        <div class="container">
+            <h3>Your Reliable Flight Booking Adventure Awaits! ✈️</h3>
+        </div>
+    </section>
+    <!-- ==================== END TAGLINE ==================== -->
+
+
+    <!-- ==================== PREMIUM FLEET VIDEO (Same as index.html) ==================== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold h3 mb-2">Our Premium Fleet</h2>
+                <p class="text-muted small">Experience comfort and luxury with our wide range of tourism vehicles.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="video-wrapper position-relative shadow-lg rounded-4 overflow-hidden bg-black">
+                        <video class="w-100 d-block" autoplay muted loop playsinline poster="assets/images/video-poster.jpg">
+                            <source src="https://mediumturquoise-goldfish-329138.hostingersite.com/assets/images/car_videos.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="https://wa.me/918883339995?text=Hi%20Madurai%20Travels!%20%F0%9F%9A%95%20I%20would%20like%20to%20book%20a%20cab.%20Please%20share%20the%20details."
+                            target="_blank" rel="noopener noreferrer"
+                            class="btn btn-success rounded-pill px-4 py-2 fw-bold shadow-sm">
+                            <i class="fab fa-whatsapp me-2"></i> Book Your Cab Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END VIDEO ==================== -->
+
+
+    <!-- ==================== TRAVEL HACKS (Same as index.html) ==================== -->
+    <section class="py-5 travel-hacks-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="hack-badge">Explore South India</span>
+                <h2 class="fw-bold hack-section-title mt-2">Travel Hacks &amp; Insights</h2>
+                <p class="hack-section-subtitle">With our knowledgeable guide, set out on exciting adventures!</p>
+            </div>
+            <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
+
+                <div class="col">
+                    <a href="https://www.mymadurai.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-yellow">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/mymadurai.png" class="hack-logo" alt="My Madurai"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY MADURAI</h6><p class="hack-desc">"Athens of the East" Merry in Magnificence.</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://mytrichy.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-green">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/mytrichy.png" class="hack-logo" alt="My Trichy"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY TRICHY</h6><p class="hack-desc">"Rockfort City" A fine blend of ancient and Modernity.</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.myrameshwaram.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-blue">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/myrameshwaram.png" class="hack-logo" alt="My Rameshwaram"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY RAMESHWARAM</h6><p class="hack-desc">"Ek Paarivarik Ehsaas" A Familiar Feeling.</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.mykanyakumari.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-mint">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/mykanyakumari.png" class="hack-logo" alt="My Kanyakumari"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY KANYAKUMARI</h6><p class="hack-desc">"The Land's End" Beginning of the Human.</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://mythiruvananthapuram.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-peach">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/mytrivandrum.png" class="hack-logo" alt="My Thiruvananthapuram"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY THIRUVANANTHAPURAM</h6><p class="hack-desc">"God's Own Country" God's Own Capital.</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://mykodaikanal.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-lavender">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/mykodaikanal.png" class="hack-logo" alt="My Kodaikanal"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY KODAIKANAL</h6><p class="hack-desc">"Hand in Hand" Your next era begins.</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://mymunnar.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-green">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/mymunnar.png" class="hack-logo" alt="My Munnar"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY MUNNAR</h6><p class="hack-desc">"Where every leaf tells a Story" Clouds dance with TEA.</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.mysouthindia.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                        <div class="hack-card hack-yellow">
+                            <div class="hack-logo-wrap"><img src="assets/images/travel_hack/mysouthinthian.png" class="hack-logo" alt="My South India"></div>
+                            <div class="hack-text"><h6 class="hack-title">MY SOUTH INDIA</h6><p class="hack-desc">Enchanting South India "Experience Yourself".</p></div>
+                            <span class="hack-arrow">&#8599;</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==================== END TRAVEL HACKS ==================== -->
+
+
+    <!-- ==================== FOOTER (Same as index.html) ==================== -->
+    <footer class="bg-white pt-5 pb-2 border-top">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="fw-bold mb-4 text-uppercase small footer-heading">Need Help?</h6>
+                    <div class="mb-4">
+                        <p class="text-muted mb-1 small">WhatsApp</p>
+                        <a href="https://wa.me/918883339995" target="_blank" rel="noopener noreferrer"
+                            class="text-decoration-none fw-bold fs-4 text-dark">+91 888 333 9995</a>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-muted mb-1 small">Email Us</p>
+                        <a href="mailto:info@maduraitravels.co" class="text-decoration-none text-dark fw-medium">info@maduraitravels.co</a>
+                    </div>
+                    <div>
+                        <p class="text-muted mb-2 small">Follow Us</p>
+                        <div class="d-flex gap-3 social-links">
+                            <a href="https://www.facebook.com/maduraitravelsandtours" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/maduraitravelsandtours/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.threads.com/@maduraitravelsandtours" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
+                            <a href="https://x.com/madurai_co" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/maduraitravelsandtours/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@maduraitravelsandtours" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://in.pinterest.com/maduraitravelsandtours/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6 class="fw-bold mb-4 text-uppercase small footer-heading">Company</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://maduraitravels.co/">Home</a></li>
+                        <li><a href="https://maduraitravels.co/about-us/">About Us</a></li>
+                        <li><a href="https://maduraitravels.co/destinations/">Destinations</a></li>
+                        <li><a href="https://maduraitravels.co/packages/">Packages</a></li>
+                        <li><a href="https://maduraitravels.co/car-rentals/">Car Rentals</a></li>
+                        <li><a href="https://maduraitravels.co/blog/">Blogger</a></li>
+                        <li><a href="https://maduraitravels.co/contact/">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6 class="fw-bold mb-4 text-uppercase small footer-heading">Address</h6>
+                    <ul class="list-unstyled footer-address">
+                        <li><i class="fas fa-map-marker-alt me-2 footer-addr-icon"></i>Madurai Travels, 120 Feet Road,<br>Madurai, Tamil Nadu &mdash; 625007</li>
+                        <li><i class="fab fa-whatsapp me-2 footer-addr-icon"></i><a href="https://wa.me/918883339995" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">888 333 9995</a></li>
+                        <li><i class="fas fa-envelope me-2 footer-addr-icon"></i><a href="mailto:info@maduraitravels.co" class="text-decoration-none text-dark">info@maduraitravels.co</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="mt-5 mb-4 opacity-50">
+
+            <div class="text-center">
+                <p class="small text-muted mb-0">
+                    Copyright &copy; 2026 Madurai Travels | Designed &amp; Developed by Madurai Travels
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- ==================== END FOOTER ==================== -->
+
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button type="button" class="btn btn-primary back-to-top" id="btnBackToTop" aria-label="Back to top">&#8679;</button>
+
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Back to Top
+            const btnTop = document.getElementById('btnBackToTop');
+            window.addEventListener('scroll', function () {
+                btnTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+            });
+            btnTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>

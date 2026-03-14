@@ -1,205 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta  maximum-scale=1.0, user-scalable="1" name="viewport">
-    <title>Madurai Travels - Clone</title>
+    <title>Madurai Travels</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
+
 <body>
 
+    <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 sticky-top shadow-sm">
-    <div class="container d-flex align-items-center justify-content-between">
-        
-        <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon" style="width: 1.2em;"></span>
-        </button>
+        <div class="container d-flex align-items-center justify-content-between">
 
-        <a class="navbar-brand " href="#">
-            <img src="assets/images/madura_travels_logo.webp" alt="Madurai Travels" class="main-logo">
-        </a>
+            <!-- Mobile: Hamburger Toggle -->
+            <button class="navbar-toggler border-0 px-0" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="width: 1.2em;"></span>
+            </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav"> 
-                <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="#">HOME</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                        SERVICES
-                    </a>
-                    <ul class="dropdown-menu border-0 shadow">
-                        <li><a class="dropdown-item" href="#">Flight Booking</a></li>
-                        <li><a class="dropdown-item" href="#">Hotel Booking</a></li>
-                        <li><a class="dropdown-item" href="#">Visa Services</a></li>
-                        <li><a class="dropdown-item" href="#">Tour Packages</a></li>
-                        <li><a class="dropdown-item" href="#">Tour Activities</a></li>
-                        <li><a class="dropdown-item" href="#">Vehicle Booking</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link fw-bold" href="#">ABOUT US</a></li>
-                <li class="nav-item"><a class="nav-link fw-bold" href="#">CONTACT US</a></li>
-            </ul>
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/madura_travels_logo.webp" alt="Madurai Travels" class="main-logo">
+            </a>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-primary" href="#">HOME</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SERVICES
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="flightbooking.html">Flight Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Hotel Booking</a></li>
+                            <li><a class="dropdown-item" href="#">Visa Services</a></li>
+                            <li><a class="dropdown-item" href="https://maduraitravels.co/tour-packages">Tour Packages</a></li>
+                            <li><a class="dropdown-item" href="https://maduraitravels.co/tour-packages">Tour Activities</a></li>
+                            <li><a class="dropdown-item" href="#">Vehicle Booking</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="https://maduraitravels.co/about-us">ABOUT US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="https://maduraitravels.co/contact">CONTACT US</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Mobile: Spacer to center logo -->
+            <div class="d-lg-none" style="width: 40px;"></div>
+
         </div>
+    </nav>
+    <!-- ==================== END NAVBAR ==================== -->
 
-        <div class="d-lg-none" style="width: 40px;"></div>
-    </div>
-</nav>
 
-    <section class="py-4 py-md-5 bg-light">
+    <!-- ==================== SERVICES GRID (12 services) ==================== -->
+<section class="py-4 py-md-5 bg-light">
     <div class="container">
         <div class="row row-cols-3 row-cols-md-3 g-2 g-md-4">
-            
+
+            <!-- 1. Flight Booking -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #F8F2D6;">
-                    <img src="assets/images/flight-time-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">FLIGHT Booking</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Easy online reservations for your next journey.</p>
+                <a href="flightbooking.html" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #F8F2D6;">
+                        <img src="assets/images/flight-time-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Flight Booking" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">FLIGHT Booking</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Easy online reservations for your next journey.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 2. Hotel Booking -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6FFEA;">
-                    <img src="assets/images/hotel-booking.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">HOTEL Booking</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Instant Hotel Booking. Your Ideal Stay Awaits!</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6FFEA;">
+                        <img src="assets/images/hotel-booking.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Hotel Booking" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">HOTEL Booking</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Instant Hotel Booking. Your Ideal Stay Awaits!</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 3. Visa Services -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6F2FF;">
-                    <img src="assets/images/visa-services.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">VISA Services</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Effortless global travel with Visa Services.</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6F2FF;">
+                        <img src="assets/images/visa-services.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Visa Services" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">VISA Services</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Effortless global travel with Visa Services.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 4. Airport Transfer -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6FFEA;">
-                    <img src="assets/images/airport-transfer.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">Airport TRANSFER</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Book tours with ease. Reserve now!</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6FFEA;">
+                        <img src="assets/images/airport-transfer.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Airport Transfer" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">Airport TRANSFER</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Book tours with ease. Reserve now!</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 5. Rent A Car -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6FFEA;">
-                    <img src="assets/images/renta-car.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">RENT A CAR</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Convenient car rentals for all needs.</p>
+                <a href="https://maduraitravels.co/car-rentals" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6FFEA;">
+                        <img src="assets/images/renta-car.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Rent A Car" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">RENT A CAR</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Convenient car rentals for all needs.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 6. Tour Packages -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6F2FF;">
-                    <img src="assets/images/tour-packages.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">Tour Packages</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Discover captivating cultures & more!</p>
+                <a href="https://maduraitravels.co/packages" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6F2FF;">
+                        <img src="assets/images/tour-packages.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Tour Packages" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">Tour Packages</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Discover captivating cultures &amp; more!</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 7. Bike Renting -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #F8F2D6;">
-                    <img src="assets/images/e-sim.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">Global E-SIM</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Effortless eSIM connectivity.</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6FFEA;">
+                        <img src="assets/images/bike-100x100.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Bike Renting" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">BIKE Renting</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Explore the city on two wheels!</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 8. Tour Activities -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6FFEA;">
-                    <img src="assets/images/bike-100x100.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">BIKE Renting</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Explore the city on two wheels!</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #F8F2D6;">
+                        <img src="assets/images/tour-activities.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Tour Activities" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">Tour ACTIVITIES</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Guided hikes and cultural tours.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 9. Tuk Tuk Hiring -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #F8F2D6;">
-                    <img src="assets/images/tour-activities.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">Tour ACTIVITIES</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Guided hikes and cultural tours.</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #F8F2D6;">
+                        <img src="assets/images/tuk-tuk-1-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Tuk Tuk Hiring" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">TUK TUK Hiring</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Efficient urban travel hiring.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 10. Train Booking -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #F8F2D6;">
-                    <img src="assets/images/tuk-tuk-1-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">TUK TUK Hiring</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Efficient urban travel hiring.</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6F2FF;">
+                        <img src="assets/images/train-1-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Train Booking" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">TRAIN Booking</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Effortless train ticket booking.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 11. Chopper Booking -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6F2FF;">
-                    <img src="assets/images/train-1-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">TRAIN Booking</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Effortless train ticket booking.</p>
+                <a href="#" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E6F2FF;">
+                        <img src="assets/images/helicopter-1-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" alt="Chopper Booking" width="60">
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold">CHOPPER Booking</h6>
+                            <p class="small text-muted mb-0 d-none d-md-block">Swift, luxurious travel booking.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
+            <!-- 12. Enquiry — WhatsApp -->
             <div class="col">
-                <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm border-0" style="background-color: #E6F2FF;">
-                    <img src="assets/images/helicopter-1-150x150.png" class="card-icon mb-1 mb-md-0 me-md-3" width="60">
-                    <div class="text-center text-md-start">
-                        <h6 class="service-title mb-0 fw-bold">CHOPPER Booking</h6>
-                        <p class="small text-muted mb-0 d-none d-md-block">Swift, luxurious travel booking.</p>
+                <a href="https://www.mymadurai.in/form.php" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                    <div class="service-card d-flex flex-column flex-md-row align-items-center p-2 p-md-3 rounded-4 shadow-sm" style="background-color: #E8F8E8;">
+                        <div class="card-icon mb-1 mb-md-0 me-md-3 d-flex align-items-center justify-content-center enquiry-icon-wrap">
+                            <i class="fab fa-whatsapp enquiry-wa-icon"></i>
+                        </div>
+                        <div class="text-center text-md-start">
+                            <h6 class="service-title mb-0 fw-bold" style="color: #1a7a1a;">ENQUIRY</h6>
+                            <p class="small mb-0 d-none d-md-block" style="color: #2e7d32;">Send us your travel enquiry on WhatsApp!</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
         </div>
     </div>
 </section>
+<!-- ==================== END SERVICES GRID ==================== -->
 
+
+    <!-- ==================== BANNER 1 (Airport) ==================== -->
     <section class="banner-section">
         <div class="container-fluid px-0">
-            <div class="row g-0">
-                <div class="col-12">
-                    <div class="banner-wrapper">
-                        <img src="assets/images/madurai_airport.webp" alt="Madurai Tour Packages Banner" class="img-fluid w-100">
-                    </div>
-                </div>
-            </div>
+            <img src="assets/images/banners/madurai_airport.webp" alt="Madurai Airport Banner" class="img-fluid w-100 d-block">
         </div>
     </section>
+    <!-- ==================== END BANNER 1 ==================== -->
 
-    <section class="py-5 bg-white overflow-hidden">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Effortless Travel Services</h2>
-            <p class="text-secondary">Making your journey smooth with expert travel support and local assistance across the South India.</p>
+
+    <!-- ==================== TOUR PACKAGES ==================== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center mb-4 px-2">
+                <h2 class="fw-bold h4 mb-0">Tour Packages</h2>
+                <a href="https://maduraitravels.co/tour-packages" target="_blank" class="text-decoration-none text-dark fw-bold small">
+                    Explore <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="assets/images/tour_packages/package_1.png" class="card-img-top package-img" alt="Sri Lanka Coastal Luxury Tour">
+                        <div class="card-body p-3 text-center">
+                            <h3 class="h6 fw-bold mb-2 card-title-limit">Honeymoon Retreat 
+</h3>
+                            <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                                
+                                <span>4N/5D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="assets/images/tour_packages/package_2.png" class="card-img-top package-img" alt="Honeymoon Retreat Sri Lanka">
+                        <div class="card-body p-3 text-center">
+                            <h3 class="h6 fw-bold mb-2 card-title-limit">Spiritual Journey </h3>
+                            <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                                <span>6N/7D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="assets/images/tour_packages/package_3.png" class="card-img-top package-img" alt="Wildlife Hills Cultural Exploration">
+                        <div class="card-body p-3 text-center">
+                            <h3 class="h6 fw-bold mb-2 card-title-limit">Ram Sethu Tourism  </h3>
+                            <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                                <span>2N/3D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <img src="assets/images/tour_packages/package_4.png" class="card-img-top package-img" alt="Wild Wanderlust">
+                        <div class="card-body p-3 text-center">
+                            <h3 class="h6 fw-bold mb-2 card-title-limit">Divine Tamilnadu and Kerala  </h3>
+                            <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
+                                <span>7N/8D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="https://maduraitravels.co/tour-packages" target="_blank" class="btn btn-outline-dark rounded-pill px-4 fw-bold shadow-sm">
+                    Explore More <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+
         </div>
+    </section>
+    <!-- ==================== END TOUR PACKAGES ==================== -->
 
-        <div class="slider-wrapper">
-            <div class="custom-slider d-flex" id="travelSlider">
+
+    <!-- ==================== BANNER 2 (Madurai) ==================== -->
+    <section class="banner-section">
+        <div class="container-fluid px-0">
+            <img src="assets/images/banners/toursandtravels.jpeg" alt="Madurai Banner" class="img-fluid w-100 d-block">
+        </div>
+    </section>
+    <!-- ==================== END BANNER 2 ==================== -->
+
+
+    <!-- ==================== TRAVEL SLIDER (South India Destinations) ==================== -->
+    <section class="py-5 bg-white overflow-hidden">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Effortless Travel Services</h2>
+                <p class="text-secondary">Making your journey smooth with expert travel support and local assistance across South India.</p>
+            </div>
+
+            <!-- Slick Carousel -->
+            <div id="travelSlider">
+
                 <div class="slider-item px-2">
                     <div class="card border-0 shadow-sm text-center">
-                        <img src="assets/images/pontichery.webp" class="card-img-top p-2 rounded" alt="Pondicherry">
+                        <img src="assets/images/travel_services/pondichery_travel.jpeg" class="card-img-top slider-img rounded" alt="Pondicherry">
                         <div class="card-body">
                             <p class="fw-bold mb-0">Exploring Pondicherry</p>
                         </div>
@@ -208,7 +367,7 @@
 
                 <div class="slider-item px-2">
                     <div class="card border-0 shadow-sm text-center">
-                        <img src="assets/images/anthra_pradesh.webp" class="card-img-top p-2 rounded" alt="Andhra">
+                        <img src="assets/images/travel_services/andhra_travel.jpeg" class="card-img-top slider-img rounded" alt="Andhra Pradesh">
                         <div class="card-body">
                             <p class="fw-bold mb-0">Exploring Andhra Pradesh</p>
                         </div>
@@ -217,7 +376,7 @@
 
                 <div class="slider-item px-2">
                     <div class="card border-0 shadow-sm text-center">
-                        <img src="assets/images/karnataka.webp" class="card-img-top p-2 rounded" alt="Karnataka">
+                        <img src="assets/images/travel_services/karnataka_travel.jpeg" class="card-img-top slider-img rounded" alt="Karnataka">
                         <div class="card-body">
                             <p class="fw-bold mb-0">Exploring Karnataka</p>
                         </div>
@@ -226,16 +385,16 @@
 
                 <div class="slider-item px-2">
                     <div class="card border-0 shadow-sm text-center">
-                        <img src="assets/images/tamilnadu.webp" class="card-img-top p-2 rounded" alt="Tamilnadu">
+                        <img src="assets/images/travel_services/tamilnadu_travel.jpeg" class="card-img-top slider-img rounded" alt="Tamil Nadu">
                         <div class="card-body">
-                            <p class="fw-bold mb-0">Exploring Tamilnadu</p>
+                            <p class="fw-bold mb-0">Exploring Tamil Nadu</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="slider-item px-2">
                     <div class="card border-0 shadow-sm text-center">
-                        <img src="assets/images/telangana.webp" class="card-img-top p-2 rounded" alt="Tamilnadu">
+                        <img src="assets/images/travel_services/telangana_travel.jpeg" class="card-img-top slider-img rounded" alt="Telangana">
                         <div class="card-body">
                             <p class="fw-bold mb-0">Exploring Telangana</p>
                         </div>
@@ -244,223 +403,290 @@
 
                 <div class="slider-item px-2">
                     <div class="card border-0 shadow-sm text-center">
-                        <img src="assets/images/karala_name.webp" class="card-img-top p-2 rounded" alt="Tamilnadu">
+                        <img src="assets/images/travel_services/kerla_travel.jpeg" class="card-img-top slider-img rounded" alt="Kerala">
                         <div class="card-body">
-                            <p class="fw-bold mb-0">Exploring Kerla</p>
+                            <p class="fw-bold mb-0">Exploring Kerala</p>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-    </div>
-</section>
+            <!-- End Slick Carousel -->
 
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4 px-2">
-            <h2 class="fw-bold h4 mb-0">Tour Packages</h2>
-            <a href="#" class="text-decoration-none text-dark fw-bold small">Explore <i class="fas fa-arrow-right ms-1"></i></a>
-        </div>
-
-        <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                    <img src="assets/images/tourpackage1.webp" class="card-img-top package-img" alt="Sri Lanka">
-                    <div class="card-body p-3 text-center">
-                        <h3 class="h6 fw-bold mb-2 card-title-limit">Sri Lankan Coastal Luxury Tour</h3>
-                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
-                            <span>from-$2,700.00</span>
-                            <span class="vr"></span>
-                            <span>8D/7N</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                    <img src="assets/images/touchpackage2.webp" class="card-img-top package-img" alt="Honeymoon">
-                    <div class="card-body p-3 text-center">
-                        <h3 class="h6 fw-bold mb-2 card-title-limit">Honeymoon Retreat in Sri Lanka</h3>
-                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
-                            <span>from-$2,250.00</span>
-                            <span class="vr"></span>
-                            <span>9D/8N</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                    <img src="assets/images/touchpackage3.webp" class="card-img-top package-img" alt="Cultural">
-                    <div class="card-body p-3 text-center">
-                        <h3 class="h6 fw-bold mb-2 card-title-limit">Wildlife, Hills and Cultural Exploration</h3>
-                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
-                            <span>from-$1,600.00</span>
-                            <span class="vr"></span>
-                            <span>9D/8N</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                    <img src="assets/images/touchpackage4.webp" class="card-img-top package-img" alt="Wild">
-                    <div class="card-body p-3 text-center">
-                        <h3 class="h6 fw-bold mb-2 card-title-limit">Wild Wanderlust</h3>
-                        <div class="d-flex justify-content-center align-items-center gap-2 text-muted small">
-                            <span>from-$1,800.00</span>
-                            <span class="vr"></span>
-                            <span>8D/7N</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-5">
-            <a href="#" class="btn btn-outline-dark rounded-pill px-4 fw-bold shadow-sm">
-                Explore More <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="banner-section">
-        <div class="container-fluid px-0">
-            <div class="row g-0">
-                <div class="col-12">
-                    <div class="banner-wrapper">
-                        <img src="assets/images/madurai_banner.webp" alt="Madurai Tour Packages Banner" class="img-fluid w-100">
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
+    <!-- ==================== END TRAVEL SLIDER ==================== -->
 
-    <section class="py-5 bg-white overflow-hidden">
+
+    <!-- ==================== PREMIUM FLEET VIDEO ==================== -->
+    <section class="py-5 bg-light">
+        <div class="container">
+
+            <div class="text-center mb-4">
+                <h2 class="fw-bold h3 mb-2">Our Premium Fleet</h2>
+                <p class="text-muted small">Experience comfort and luxury with our wide range of tourism vehicles.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="video-wrapper position-relative shadow-lg rounded-4 overflow-hidden bg-black">
+                        <video class="w-100 d-block" autoplay muted loop playsinline poster="assets/images/video-poster.jpg">
+                            <source src="assets/images/premium_car.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <!-- Book Your Cab Now — Opens WhatsApp with pre-filled message -->
+<div class="mt-4 text-center">
+    <a href="https://wa.me/918883339995?text=Hi%20Madurai%20Travels!%20%F0%9F%9A%95%20I%20would%20like%20to%20book%20a%20cab.%20Please%20share%20the%20details."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-success rounded-pill px-4 py-2 fw-bold shadow-sm">
+        <i class="fab fa-whatsapp me-2"></i> Book Your Cab Now
+    </a>
+</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==================== END PREMIUM FLEET VIDEO ==================== -->
+
+   <!-- ==================== TRAVEL HACKS & INSIGHTS SECTION ==================== -->
+<section class="py-5 travel-hacks-section">
     <div class="container">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold h3 mb-2">Travel Hacks & Insights</h2>
-            <p class="text-muted small">With our knowledgeable guide, set out on exciting adventures!</p>
+
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+            <span class="hack-badge">Explore South India</span>
+            <h2 class="fw-bold hack-section-title mt-2">Travel Hacks &amp; Insights</h2>
+            <p class="hack-section-subtitle">With our knowledgeable guide, set out on exciting adventures!</p>
         </div>
 
-        <div class="hacks-slider-wrapper">
-            <div class="hacks-slider-init d-flex" id="hacksSlider">
-                
-                <div class="hacks-item px-2">
-                    <div class="card border-0 shadow-sm h-100 hacks-card">
-                        <div class="p-2">
-                            <img src="assets/images/chithirai_thiruvila.webp" class="card-img-top rounded-3 hacks-img" alt="Exploring Madurai">
-                        </div>
-                        <div class="card-body pt-0 pb-3 text-center">
-                            <h6 class="fw-bold mb-0 small text-dark">Exploring Madurai</h6>
-                        </div>
-                    </div>
-                </div>
+        <!-- Grid: 4 cols desktop / 2 cols mobile -->
+        <div class="row row-cols-2 row-cols-md-4 g-3 g-md-4">
 
-                <div class="hacks-item px-2">
-                    <div class="card border-0 shadow-sm h-100 hacks-card">
-                        <div class="p-2">
-                            <img src="assets/images/kodaikanal.webp" class="card-img-top rounded-3 hacks-img" alt="Exploring Kodaikanal">
+            <!-- 1. My Madurai -->
+            <div class="col">
+                <a href="https://www.mymadurai.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-yellow">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/mymadurai.png" class="hack-logo" alt="My Madurai">
                         </div>
-                        <div class="card-body pt-0 pb-3 text-center">
-                            <h6 class="fw-bold mb-0 small text-dark">Exploring Kodaikanal</h6>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY MADURAI</h6>
+                            <p class="hack-desc">"Athens of the East" Merry in Magnificence.</p>
                         </div>
+                        <span class="hack-arrow">&#8599;</span>
                     </div>
-                </div>
-
-                <div class="hacks-item px-2">
-                    <div class="card border-0 shadow-sm h-100 hacks-card">
-                        <div class="p-2">
-                            <img src="assets/images/rameshvaram.webp" class="card-img-top rounded-3 hacks-img" alt="Exploring Rameshvaram">
-                        </div>
-                        <div class="card-body pt-0 pb-3 text-center">
-                            <h6 class="fw-bold mb-0 small text-dark">Exploring Rameshvaram</h6>
-                        </div>
-                    </div>
-                </div>
-
+                </a>
             </div>
+
+            <!-- 2. My Trichy -->
+            <div class="col">
+                <a href="https://mytrichy.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-green">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/mytrichy.png" class="hack-logo" alt="My Trichy">
+                        </div>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY TRICHY</h6>
+                            <p class="hack-desc">"Rockfort City" A fine blend of ancient and Modernity.</p>
+                        </div>
+                        <span class="hack-arrow">&#8599;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 3. My Rameshwaram -->
+            <div class="col">
+                <a href="https://www.myrameshwaram.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-blue">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/myrameshwaram.png" class="hack-logo" alt="My Rameshwaram">
+                        </div>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY RAMESHWARAM</h6>
+                            <p class="hack-desc">"Ek Paarivarik Ehsaas" A Familiar Feeling.</p>
+                        </div>
+                        <span class="hack-arrow">&#8599;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 4. My Kanyakumari -->
+            <div class="col">
+                <a href="https://www.mykanyakumari.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-mint">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/mykanyakumari.png" class="hack-logo" alt="My Kanyakumari">
+                        </div>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY KANYAKUMARI</h6>
+                            <p class="hack-desc">"The Land's End" Beginning of the Human.</p>
+                        </div>
+                        <span class="hack-arrow">&#8599;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 5. My Thiruvananthapuram -->
+            <div class="col">
+                <a href="https://mythiruvananthapuram.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-peach">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/mytrivandrum.png" class="hack-logo" alt="My Thiruvananthapuram">
+                        </div>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY THIRUVANANTHAPURAM</h6>
+                            <p class="hack-desc">"God's Own Country" God's Own Capital.</p>
+                        </div>
+                        <span class="hack-arrow">&#8599;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 6. My Kodaikanal -->
+            <div class="col">
+                <a href="https://mykodaikanal.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-lavender">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/mykodaikanal.png" class="hack-logo" alt="My Kodaikanal">
+                        </div>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY KODAIKANAL</h6>
+                            <p class="hack-desc">"Hand in Hand" Your next era begins.</p>
+                        </div>
+                        <span class="hack-arrow">&#8599;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 7. My Munnar -->
+            <div class="col">
+                <a href="https://mymunnar.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-green">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/mymunnar.png" class="hack-logo" alt="My Munnar">
+                        </div>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY MUNNAR</h6>
+                            <p class="hack-desc">"Where every leaf tells a Story" Clouds dance with TEA.</p>
+                        </div>
+                        <span class="hack-arrow">&#8599;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 8. My South India -->
+            <div class="col">
+                <a href="https://www.mysouthindia.in/" target="_blank" rel="noopener noreferrer" class="hack-link">
+                    <div class="hack-card hack-yellow">
+                        <div class="hack-logo-wrap">
+                            <img src="assets/images/travel_hack/mysouthinthian.png" class="hack-logo" alt="My South India">
+                        </div>
+                        <div class="hack-text">
+                            <h6 class="hack-title">MY SOUTH INDIA</h6>
+                            <p class="hack-desc">Enchanting South India "Experience Yourself".</p>
+                        </div>
+                        <span class="hack-arrow">&#8599;</span>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
+<!-- ==================== END TRAVEL HACKS & INSIGHTS SECTION ==================== -->
 
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold h3 mb-2">Our Premium Fleet</h2>
-            <p class="text-muted small">Experience comfort and luxury with our wide range of tourism vehicles.</p>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="video-wrapper position-relative shadow-lg rounded-4 overflow-hidden bg-black">
-                    <video 
-                        class="w-100 d-block" 
-                        autoplay 
-                        muted 
-                        loop 
-                        playsinline
-                        poster="assets/images/video-poster.jpg">
-                        <source src="https://mediumturquoise-goldfish-329138.hostingersite.com/assets/images/car_videos.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                
-                <div class="mt-4 text-center">
-                    <a href="#" class="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow-sm">
-                        <i class="fas fa-taxi me-2"></i> Book Your Cab Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  <!-- ==================== FONT AWESOME UPDATE ==================== -->
+<!-- In your <head>, REMOVE the old FA link and REPLACE with this: -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<!-- ==================== END FONT AWESOME UPDATE ==================== -->
+
+
+<!-- ==================== FOOTER ==================== -->
 <footer class="bg-white pt-5 pb-2 border-top">
     <div class="container">
         <div class="row g-4">
-            
+
+            <!-- Column 1: Need Help -->
             <div class="col-lg-4 col-md-6">
-                <h6 class="fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Need Help?</h6>
+                <h6 class="fw-bold mb-4 text-uppercase small footer-heading">Need Help?</h6>
+
                 <div class="mb-4">
-                    <p class="text-muted mb-1 small">Call Us</p>
-                    <a href="tel:+91773678688" class="text-decoration-none fw-bold fs-4 text-dark">+91 773 678 688</a>
+                    <p class="text-muted mb-1 small">WhatsApp</p>
+                    <a href="https://wa.me/918883339995" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none fw-bold fs-4 text-dark">+91 888 333 9995</a>
                 </div>
+
                 <div class="mb-4">
-                    <p class="text-muted mb-1 small">Email for Us</p>
-                    <a href="mailto:info@maduraitravels.com" class="text-decoration-none text-dark fw-medium">info@maduraitravels.com</a>
+                    <p class="text-muted mb-1 small">Email Us</p>
+                    <a href="mailto:info@maduraitravels.co"
+                        class="text-decoration-none text-dark fw-medium">info@maduraitravels.co</a>
                 </div>
+
                 <div>
                     <p class="text-muted mb-2 small">Follow Us</p>
                     <div class="d-flex gap-3 social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/maduraitravelsandtours" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/maduraitravelsandtours/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.threads.com/@maduraitravelsandtours" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+                            <i class="fab fa-threads"></i>
+                        </a>
+                        <a href="https://x.com/madurai_co" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/maduraitravelsandtours/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@maduraitravelsandtours" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://in.pinterest.com/maduraitravelsandtours/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
+            <!-- Column 2: Company Links -->
             <div class="col-lg-3 col-md-6 col-6">
-                <h6 class="fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Company</h6>
+                <h6 class="fw-bold mb-4 text-uppercase small footer-heading">Company</h6>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tours</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="https://maduraitravels.co/">Home</a></li>
+                    <li><a href="https://maduraitravels.co/about-us/">About Us</a></li>
+                    <li><a href="https://maduraitravels.co/destinations/">Destinations</a></li>
+                    <li><a href="https://maduraitravels.co/packages/">Packages</a></li>
+                    <li><a href="https://maduraitravels.co/car-rentals/">Car Rentals</a></li>
+                    <li><a href="https://maduraitravels.co/blog/">Blogger</a></li>
+                    <li><a href="https://maduraitravels.co/contact/">Contact</a></li>
                 </ul>
             </div>
 
+            <!-- Column 3: Address (replaces Support) -->
             <div class="col-lg-3 col-md-6 col-6">
-                <h6 class="fw-bold mb-4 text-uppercase small" style="letter-spacing: 1px;">Support</h6>
-                <ul class="list-unstyled footer-links">
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">User Dashboard</a></li>
-                    <li><a href="#">Travel Tips & Updates</a></li>
+                <h6 class="fw-bold mb-4 text-uppercase small footer-heading">Address</h6>
+                <ul class="list-unstyled footer-address">
+                    <li>
+                        <i class="fas fa-map-marker-alt me-2 footer-addr-icon"></i>
+                        Madurai Travels, 120 Feet Road,<br>Madurai, Tamil Nadu &mdash; 625007
+                    </li>
+                    <li>
+                        <i class="fab fa-whatsapp me-2 footer-addr-icon"></i>
+                        <a href="https://wa.me/918883339995" target="_blank" rel="noopener noreferrer"
+                            class="text-decoration-none text-dark">888 333 9995</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope me-2 footer-addr-icon"></i>
+                        <a href="mailto:info@maduraitravels.co"
+                            class="text-decoration-none text-dark">info@maduraitravels.co</a>
+                    </li>
                 </ul>
             </div>
 
@@ -468,93 +694,83 @@
 
         <hr class="mt-5 mb-4 opacity-50">
 
-        <div class="row align-items-center">
-            <div class="col-md-12 text-center text-md-start">
-                <p class="small text-muted mb-0">
-                    Copyright © 2026 **Madurai Travels** | Designed & Developed by Madurai Travels
-                </p>
-            </div>
+        <div class="text-center">
+            <p class="small text-muted mb-0">
+                Copyright &copy; 2026 Madurai Travels | Designed &amp; Developed by Madurai Travels
+            </p>
         </div>
+
     </div>
 </footer>
+<!-- ==================== END FOOTER ==================== -->
 
-    <button type="button" class="btn btn-primary rounded back-to-top" id="btn-back-to-top">
-        <i class="bi bi-chevron-up"></i> ↑
+    <!-- ==================== BACK TO TOP BUTTON ==================== -->
+    <button type="button" class="btn btn-primary back-to-top" id="btnBackToTop" aria-label="Back to top">
+        &#8679;
     </button>
+    <!-- ==================== END BACK TO TOP ==================== -->
 
+
+    <!-- ==================== SCRIPTS ==================== -->
+
+    <!-- jQuery (required for Slick) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-       $(document).ready(function(){
-    $('#travelSlider').slick({
-        dots: false,          // Kela dots venumna true pannunga
-        infinite: true,       // Loop aagitte irukum
-        speed: 800,           // Transition speed
-        slidesToShow: 4,      // Laptop-la 4 cards kaatum
-        slidesToScroll: 1,    // Oru thadava oru card move aagum
-        autoplay: true,       // Automatic-ah move aagum
-        autoplaySpeed: 3000,  // 3 Seconds gap
-        arrows: false,        // Side arrows thevaiyillai
-        draggable: true,      // Cursor vachi thalla mudiyum
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2 // Tablet/Mobile-la 2 cards
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2 // Chinna mobile-la 1 card
-                }
-            }
-        ]
-    });
-});
+        $(document).ready(function () {
 
-$(document).ready(function(){
-    $('#hacksSlider').slick({
-        dots: true,
-        infinite: true,
-        speed: 600,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3
+            // ---- Travel Destinations Slider ----
+            $('#travelSlider').slick({
+                dots: false,
+                infinite: true,
+                speed: 800,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: false,
+                draggable: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: { slidesToShow: 3 }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: { slidesToShow: 2 }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: { slidesToShow: 2 }
+                    }
+                ]
+            });
+
+            // ---- Back to Top Button ----
+            const btnTop = document.getElementById('btnBackToTop');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    btnTop.style.display = 'flex';
+                } else {
+                    btnTop.style.display = 'none';
                 }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2, // 2 items in mobile as per image_02d37e.png
-                    slidesToScroll: 1,
-                    dots: true
-                }
-            }
-        ]
-    });
-});
+            });
+
+            btnTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+        });
     </script>
+
+    <!-- ==================== END SCRIPTS ==================== -->
+
 </body>
 </html>

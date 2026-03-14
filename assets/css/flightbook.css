@@ -1,0 +1,288 @@
+/* =============================================
+           FLIGHT BOOKING PAGE — Inline Styles
+           ============================================= */
+
+        .flight-page {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* ---- HERO SECTION ---- */
+        .flight-hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 40%, #fef3c7 100%);
+            padding: 60px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flight-hero::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 320px; height: 320px;
+            background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .flight-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -40px; left: -40px;
+            width: 240px; height: 240px;
+            background: radial-gradient(circle, rgba(251,191,36,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .flight-hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0c1445;
+            line-height: 1.2;
+        }
+
+        .flight-hero-title span {
+            color: #0ea5e9;
+        }
+
+        .flight-hero-subtitle {
+            font-size: 1.1rem;
+            color: #475569;
+            max-width: 520px;
+            line-height: 1.7;
+        }
+
+        .flight-hero-img {
+            width: 100%;
+            max-width: 520px;
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(14,165,233,0.18);
+        }
+
+        .flight-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(14,165,233,0.1);
+            border: 1px solid rgba(14,165,233,0.25);
+            color: #0369a1;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* ---- WHY CHOOSE US ---- */
+        .flight-features {
+            background: #fff;
+            padding: 70px 0;
+        }
+
+        .feature-card {
+            background: #f8faff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 30px 24px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(14,165,233,0.12);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 1.6rem;
+            color: #0284c7;
+        }
+
+        .feature-card h5 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ---- AIRLINES WE SERVE ---- */
+        .airlines-section {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            padding: 60px 0;
+        }
+
+        .airline-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #334155;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .airline-chip:hover {
+            border-color: #0ea5e9;
+            color: #0284c7;
+            box-shadow: 0 4px 16px rgba(14,165,233,0.15);
+            transform: translateY(-2px);
+        }
+
+        .airline-chip i {
+            color: #0ea5e9;
+            font-size: 1rem;
+        }
+
+        /* ---- STEPS SECTION ---- */
+        .steps-section {
+            background: #fff;
+            padding: 70px 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(14,165,233,0.3);
+        }
+
+        .step-text h6 {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .step-text p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ---- TALK TO US / CTA ---- */
+        .flight-cta {
+            background: linear-gradient(135deg, #0c1445 0%, #0f3460 50%, #0ea5e9 100%);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flight-cta::before {
+            content: '✈';
+            position: absolute;
+            font-size: 18rem;
+            color: rgba(255,255,255,0.03);
+            right: -40px;
+            top: -40px;
+            line-height: 1;
+        }
+
+        .flight-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .flight-cta p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1rem;
+            max-width: 560px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .btn-whatsapp-flight {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(37,211,102,0.35);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-whatsapp-flight:hover {
+            background: #1ebe5d;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(37,211,102,0.45);
+        }
+
+        .btn-whatsapp-flight i {
+            font-size: 1.3rem;
+        }
+
+        /* ---- BOTTOM TAGLINE ---- */
+        .flight-tagline {
+            background: #f8faff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .flight-tagline h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0c1445;
+        }
+
+        /* ---- MOBILE RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .flight-hero-title {
+                font-size: 1.9rem;
+            }
+            .flight-hero-subtitle {
+                font-size: 0.95rem;
+            }
+            .flight-cta h2 {
+                font-size: 1.5rem;
+            }
+        }

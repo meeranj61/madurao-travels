@@ -1,98 +1,137 @@
-/* Custom Styles */
+/* ==========================================================
+   MADURAI TRAVELS - Main Stylesheet
+   Production-ready, clean, no dead code
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   1. GLOBAL / BASE
+   ---------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
 body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-.navbar-brand img {
-    object-fit: contain;
-}
+
+/* ----------------------------------------------------------
+   2. NAVBAR
+   ---------------------------------------------------------- */
 
 .nav-link {
     font-size: 0.9rem;
     color: #333 !important;
 }
 
-/* 1. Global fix for horizontal scroll */
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
+.nav-link.active {
+    color: #0d6efd !important;
 }
 
-/* 2. Logo Adjustments */
-.main-logo {
-    height: 48px; /* Mobile height */
-    object-fit: contain;
-}
-
+/* Desktop: spacing between nav links */
 @media (min-width: 992px) {
-    .main-logo {
-        height: 60px; /* Desktop height */
-    }
-    /* Desktop-la mattum space venum na idhai use pannunga */
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-left: 30px !important;
     }
 }
 
-/* 3. Mobile Specific Fixes */
+/* Mobile: nav link borders for separation */
 @media (max-width: 991px) {
     .navbar-brand {
         margin-right: 0 !important;
     }
 
-    /* Resetting the padding that caused scroll */
     .navbar-expand-lg .navbar-nav .nav-link {
-        padding-left: 15px !important; /* Mobile-la padding-ai kuraikkum */
+        padding-left: 15px !important;
         padding-top: 12px;
         padding-bottom: 12px;
         border-bottom: 1px solid #f8f9fa;
     }
-    
 }
 
-/* --- Common Styles --- */
+/* Dropdown on hover (desktop) */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+
+.dropdown-item {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+/* ----------------------------------------------------------
+   3. LOGO
+   ---------------------------------------------------------- */
+
+.main-logo {
+    height: 48px;
+    object-fit: contain;
+}
+
+@media (min-width: 992px) {
+    .main-logo {
+        height: 60px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   4. SERVICE CARDS
+   ---------------------------------------------------------- */
+
 .service-card {
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    min-height: 100%;
     border-radius: 20px !important;
+    border: none !important;
 }
 
 .service-card:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* --- Mobile View (Reference: image_7ce4fc.png) --- */
+/* Mobile service card layout */
 @media (max-width: 767px) {
     .service-card {
         padding: 15px 5px !important;
-        min-height: 100px;
+        min-height: 106px;
         justify-content: center;
         border-radius: 15px !important;
     }
 
     .card-icon {
-        width: 35px !important; /* Mobile-la icon size */
+        width: 35px !important;
         margin-bottom: 8px;
     }
 
     .service-title {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #0066cc !important;
-    letter-spacing: 2.8px;
-    padding-top: 10px;
-}
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #0066cc !important;
+        letter-spacing: 2.8px;
+        padding-top: 10px;
+    }
 }
 
-/* --- Desktop View (Reference: image_7d02ab.png) --- */
+/* Desktop service card layout */
 @media (min-width: 768px) {
     .service-card {
         min-height: 110px;
     }
-    
+
     .card-icon {
         width: 55px;
     }
@@ -100,7 +139,7 @@ html, body {
     .service-title {
         font-size: 1.1rem;
         color: #333 !important;
-        text-transform: uppercase; /* Normal text format */
+        text-transform: uppercase;
     }
 
     .service-card p {
@@ -108,84 +147,93 @@ html, body {
         line-height: 1.4;
     }
 }
-/* Dropdown Hover (User experience improve panna) */
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; 
-}
 
-/* Navbar active state color */
-.nav-link.active {
-    color: #0d6efd !important;
-}
 
-.navbar-expand-lg .navbar-nav .nav-link {
-    
-    padding-left: 40px;
-}
+/* ----------------------------------------------------------
+   5. BANNER SECTIONS
+   ---------------------------------------------------------- */
 
-.dropdown-item{
-    padding-top: 16px;
-}
-/* Banner Section */
 .banner-section {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.banner-wrapper img {
-    /* Image proportions-ah maintain panna */
-    display: block;
-    height: auto;
-}
-
-/* Back to Top Button Styling */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none; /* Scroll pannumbodu mattum show aagum */
-    z-index: 1000;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-}
-
-/* Mobile adjustments */
 @media (max-width: 768px) {
     .banner-section {
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
-.slider-wrapper {
-    padding: 20px 0;
+
+/* ----------------------------------------------------------
+   6. TOUR PACKAGE CARDS
+   ---------------------------------------------------------- */
+
+.package-img {
+    height: 180px;
+    object-fit: cover;
 }
 
-/* Card image size fix */
-.slider-item img {
+/* Two-line title clamp */
+.card-title-limit {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.4em;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+    .package-img {
+        height: 130px;
+    }
+
+    .card-body {
+        padding: 10px !important;
+    }
+
+    .card-body p,
+    .card-body span {
+        font-size: 0.7rem !important;
+    }
+
+    .col-6 {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   7. TRAVEL DESTINATIONS SLIDER
+   ---------------------------------------------------------- */
+
+.slider-img {
     width: 100%;
     height: 250px;
-    object-fit: contain; /* Image stretch aagama iruka */
+    object-fit: contain;
     background: #f8f9fa;
+    padding: 8px;
 }
 
-/* Slick arrows (Optional: arrows venumna) */
-.slick-prev:before, .slick-next:before {
-    color: #000;
+.card {
+    transition: transform 0.3s ease;
 }
 
-/* Mobile-la card content size kuraika */
+.card:hover {
+    transform: translateY(-5px);
+}
+
 @media (max-width: 576px) {
-    .slider-item img {
-        height: 150px !important; /* Mobile-la image height-ai kuraikanum, appo thaan 2 cards neat-ah fit aagum */
+    .slider-img {
+        height: 150px !important;
         padding: 5px !important;
     }
-    
+
     .slider-item .card-body p {
-        font-size: 0.75rem !important; /* Text size-ai chinna dhaa maathanum */
+        font-size: 0.75rem !important;
         line-height: 1.2;
     }
 
@@ -193,21 +241,17 @@ html, body {
         padding-left: 5px !important;
         padding-right: 5px !important;
     }
-    
-    .slider-wrapper {
-        padding: 10px 0;
-    }
 }
 
-/* Card image size for Desktop (already neenga vachurukkuradhu) */
-.slider-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    background: #f8f9fa;
+
+/* ----------------------------------------------------------
+   8. FOOTER
+   ---------------------------------------------------------- */
+
+.footer-heading {
+    letter-spacing: 1px;
 }
 
-/* Footer Link Styles */
 .footer-links li {
     margin-bottom: 12px;
 }
@@ -220,10 +264,54 @@ html, body {
 }
 
 .footer-links a:hover {
-    color: #0066cc; /* Unga brand blue color */
+    color: #0066cc;
 }
 
-/* Social Icon Styles */
+/* Vertical divider after first footer column (desktop only) */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        border-right: 1px solid #eee;
+        padding-right: 40px;
+    }
+}
+
+footer p.small {
+    font-size: 0.85rem;
+}
+
+/* ----------------------------------------------------------
+   FOOTER ADDRESS COLUMN
+   Add this to your style.css
+   ---------------------------------------------------------- */
+
+.footer-address li {
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.footer-address a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-address a:hover {
+    color: #0066cc;
+}
+
+.footer-addr-icon {
+    color: #0066cc;
+    font-size: 0.9rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------
+   9. SOCIAL ICONS
+   ---------------------------------------------------------- */
+
 .social-links a {
     width: 35px;
     height: 35px;
@@ -234,140 +322,375 @@ html, body {
     border-radius: 50%;
     color: #333;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
     background: #0066cc;
-    color: white;
+    color: #fff;
     transform: translateY(-3px);
 }
 
-/* Vertical line effect for "Need Help" section as per image */
-@media (min-width: 992px) {
-    .col-lg-4 {
-        border-right: 1px solid #eee;
-        padding-right: 40px;
+
+/* ----------------------------------------------------------
+   10. BACK TO TOP BUTTON
+   ---------------------------------------------------------- */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Shown via JS on scroll */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+    border-radius: 50%;
+}
+
+/* ==========================================================
+   TRAVEL HACKS & INSIGHTS — Production CSS
+   Clean, no duplicates. Paste into style.css
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   1. SECTION WRAPPER
+   ---------------------------------------------------------- */
+
+.travel-hacks-section {
+    background: #f4f7fb;
+    border-top: 1px solid #e5e9f0;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+
+/* ----------------------------------------------------------
+   2. SECTION HEADING
+   ---------------------------------------------------------- */
+
+.hack-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #0066cc, #00a3e0);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 50px;
+}
+
+.hack-section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.hack-section-subtitle {
+    font-size: 1rem;
+    color: #64748b;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+    .hack-section-title {
+        font-size: 1.45rem;
+    }
+    .hack-section-subtitle {
+        font-size: 0.875rem;
     }
 }
 
-/* For Copyright Section */
-footer p.small {
-    font-size: 0.85rem;
-}
 
-/* Slider Wrapper */
-.slider-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
-    scrollbar-width: none; /* Hide scrollbar Firefox */
-}
+/* ----------------------------------------------------------
+   3. LINK WRAPPER
+   ---------------------------------------------------------- */
 
-.slider-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar Chrome/Safari */
-}
-
-.custom-slider {
-    gap: 15px; /* Spacing between cards */
-    padding: 10px 5px;
-}
-
-/* Card Width Logic */
-.slider-item {
-    flex: 0 0 85%; /* Mobile: Shows one full card and a peek of next */
-}
-
-@media (min-width: 768px) {
-    .slider-item {
-        flex: 0 0 31%; /* Tablet/Desktop: 3 cards in a row */
-    }
-}
-
-@media (min-width: 1200px) {
-    .slider-item {
-        flex: 0 0 23.5%; /* Large Desktop: 4 cards in a row */
-    }
-}
-
-/* Card Image Aspect Ratio */
-.card-img-top {
-    height: 180px;
-    object-fit: cover;
-    background-color: #f8f9fa;
-}
-
-.card {
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+.hack-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
 }
 
 
-/* Package Image Adjustments */
-.package-img {
-    height: 180px;
-    object-fit: cover;
-}
+/* ----------------------------------------------------------
+   4. CARD BASE
+   ---------------------------------------------------------- */
 
-/* Card Title Limiter - line breaks prevent panna */
-.card-title-limit {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+.hack-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px 18px 16px;
+    border-radius: 20px;
+    border: 1.5px solid rgba(0,0,0,0.06);
+    height: 100%;
+    position: relative;
     overflow: hidden;
-    min-height: 2.4em;
-    font-size: 0.9rem;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    /* Top colored accent bar */
 }
 
-/* Mobile Specific (image_033174.jpg reference) */
-@media (max-width: 576px) {
-    .package-img {
-        height: 130px; /* Mobile-la image height kuraikanum */
-    }
-    .card-body {
-        padding: 10px !important;
-    }
-    .card-body p, .card-body span {
-        font-size: 0.7rem !important; /* Text size for mobile cards */
-    }
-    .col-6 {
-        padding-left: 6px;
-        padding-right: 6px;
-    }
+.hack-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    border-radius: 20px 20px 0 0;
+    opacity: 0;
+    transition: opacity 0.28s ease;
+}
+
+.hack-link:hover .hack-card {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.hack-link:hover .hack-card::after {
+    opacity: 1;
 }
 
 
-/* Hacks Section Specific */
-.hacks-slider-wrapper {
-    padding-bottom: 30px;
+/* ----------------------------------------------------------
+   5. COLOR THEMES
+   ---------------------------------------------------------- */
+
+/* Yellow / Warm */
+.hack-yellow {
+    background: linear-gradient(145deg, #fffbeb, #fef3c7);
+    border-color: #fde68a;
+}
+.hack-yellow::after { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.hack-yellow .hack-title { color: #92400e; }
+.hack-yellow .hack-desc  { color: #a16207; }
+.hack-yellow .hack-arrow { color: #d97706; }
+.hack-link:hover .hack-yellow { border-color: #f59e0b; box-shadow: 0 16px 40px rgba(245,158,11,0.18); }
+
+/* Green / Fresh */
+.hack-green {
+    background: linear-gradient(145deg, #f0fdf4, #dcfce7);
+    border-color: #86efac;
+}
+.hack-green::after { background: linear-gradient(90deg, #16a34a, #4ade80); }
+.hack-green .hack-title { color: #14532d; }
+.hack-green .hack-desc  { color: #166534; }
+.hack-green .hack-arrow { color: #16a34a; }
+.hack-link:hover .hack-green { border-color: #22c55e; box-shadow: 0 16px 40px rgba(34,197,94,0.18); }
+
+/* Blue / Cool */
+.hack-blue {
+    background: linear-gradient(145deg, #eff6ff, #dbeafe);
+    border-color: #93c5fd;
+}
+.hack-blue::after { background: linear-gradient(90deg, #1d4ed8, #60a5fa); }
+.hack-blue .hack-title { color: #1e3a8a; }
+.hack-blue .hack-desc  { color: #1d4ed8; }
+.hack-blue .hack-arrow { color: #2563eb; }
+.hack-link:hover .hack-blue { border-color: #3b82f6; box-shadow: 0 16px 40px rgba(59,130,246,0.18); }
+
+/* Mint / Teal */
+.hack-mint {
+    background: linear-gradient(145deg, #f0fdfa, #ccfbf1);
+    border-color: #5eead4;
+}
+.hack-mint::after { background: linear-gradient(90deg, #0d9488, #2dd4bf); }
+.hack-mint .hack-title { color: #134e4a; }
+.hack-mint .hack-desc  { color: #0f766e; }
+.hack-mint .hack-arrow { color: #0d9488; }
+.hack-link:hover .hack-mint { border-color: #14b8a6; box-shadow: 0 16px 40px rgba(20,184,166,0.18); }
+
+/* Peach / Orange */
+.hack-peach {
+    background: linear-gradient(145deg, #fff7ed, #ffedd5);
+    border-color: #fdba74;
+}
+.hack-peach::after { background: linear-gradient(90deg, #ea580c, #fb923c); }
+.hack-peach .hack-title { color: #7c2d12; }
+.hack-peach .hack-desc  { color: #9a3412; }
+.hack-peach .hack-arrow { color: #ea580c; }
+.hack-link:hover .hack-peach { border-color: #f97316; box-shadow: 0 16px 40px rgba(249,115,22,0.18); }
+
+/* Lavender / Purple */
+.hack-lavender {
+    background: linear-gradient(145deg, #faf5ff, #ede9fe);
+    border-color: #c4b5fd;
+}
+.hack-lavender::after { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+.hack-lavender .hack-title { color: #4c1d95; }
+.hack-lavender .hack-desc  { color: #5b21b6; }
+.hack-lavender .hack-arrow { color: #7c3aed; }
+.hack-link:hover .hack-lavender { border-color: #8b5cf6; box-shadow: 0 16px 40px rgba(139,92,246,0.18); }
+
+
+/* ----------------------------------------------------------
+   6. LOGO CIRCLE
+   ---------------------------------------------------------- */
+
+.hack-logo-wrap {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid rgba(0,0,0,0.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: box-shadow 0.28s ease, transform 0.28s ease;
 }
 
-.hacks-img {
-    height: 180px;
-    object-fit: cover;
-    background: #f8f9fa;
+.hack-link:hover .hack-logo-wrap {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.16);
 }
 
-/* Reference Image maadhiri Mobile-la 2 cards alignment */
-@media (max-width: 576px) {
-    .hacks-img {
-        height: 120px !important; /* Mobile height as per image_02d37e.png */
+.hack-logo {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+}
+
+
+/* ----------------------------------------------------------
+   7. TEXT
+   ---------------------------------------------------------- */
+
+.hack-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.hack-title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.hack-desc {
+    font-size: 0.77rem;
+    line-height: 1.45;
+    margin: 0;
+    opacity: 0.85;
+}
+
+
+/* ----------------------------------------------------------
+   8. ARROW (top-right)
+   ---------------------------------------------------------- */
+
+.hack-arrow {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0.35;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+    line-height: 1;
+}
+
+.hack-link:hover .hack-arrow {
+    opacity: 1;
+    transform: translate(3px, -3px);
+}
+
+
+/* ----------------------------------------------------------
+   9. MOBILE — 2 columns, stacked, large logo + desc visible
+   ---------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .hack-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 22px 12px 18px;
+        gap: 12px;
+        border-radius: 18px;
+        min-height: 190px;
+        /* Make top bar always visible on mobile for color identity */
     }
-    .hacks-card h6 {
-        font-size: 0.7rem !important;
+
+    .hack-card::after {
+        opacity: 1; /* Always show color bar on mobile */
+    }
+
+    /* Bigger logo on mobile — key fix */
+    .hack-logo-wrap {
+        width: 90px;
+        height: 90px;
+        border-width: 2.5px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .hack-logo {
+        width: 86px;
+        height: 86px;
+    }
+
+    .hack-title {
+        font-size: 0.7rem;
+        letter-spacing: 0.4px;
+        margin-bottom: 4px;
+    }
+
+    /* Always show description on mobile */
+    .hack-desc {
+        display: block !important;
+        font-size: 0.67rem;
+        line-height: 1.4;
+    }
+
+    /* Hide arrow on mobile */
+    .hack-arrow {
+        display: none;
     }
 }
 
-/* Unique Dots Styling for this slider */
-#hacksSlider .slick-dots {
-    bottom: -35px;
+/* ----------------------------------------------------------
+   ENQUIRY CARD — WhatsApp Icon
+   Add this to your style.css
+   ---------------------------------------------------------- */
+
+.enquiry-icon-wrap {
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
-#hacksSlider .slick-dots li button:before {
-    font-size: 10px;
-    color: #ccc;
+
+.enquiry-wa-icon {
+    font-size: 2rem;
+    color: #ffffff;
 }
-#hacksSlider .slick-dots li.slick-active button:before {
-    color: #0d6efd; /* Blue dots as per reference */
+
+/* Mobile size match */
+@media (max-width: 767px) {
+    .enquiry-icon-wrap {
+        width: 35px;
+        height: 35px;
+    }
+
+    .enquiry-wa-icon {
+        font-size: 1.2rem;
+    }
 }
